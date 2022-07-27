@@ -1,5 +1,0 @@
-add_test([=[TimeProvider.LifeTime]=]  E:/Users/Andreas/Andreas/PrivateElektronik/Cpp/HomeMaintenance/TimeProvider/build/test/timeprovider_test.exe [==[--gtest_filter=TimeProvider.LifeTime]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[TimeProvider.LifeTime]=]  PROPERTIES WORKING_DIRECTORY E:/Users/Andreas/Andreas/PrivateElektronik/Cpp/HomeMaintenance/TimeProvider/build/test SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-add_test([=[TimeProviderSim.LifeTime]=]  E:/Users/Andreas/Andreas/PrivateElektronik/Cpp/HomeMaintenance/TimeProvider/build/test/timeprovider_test.exe [==[--gtest_filter=TimeProviderSim.LifeTime]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[TimeProviderSim.LifeTime]=]  PROPERTIES WORKING_DIRECTORY E:/Users/Andreas/Andreas/PrivateElektronik/Cpp/HomeMaintenance/TimeProvider/build/test SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-set(  timeprovider_test_TESTS TimeProvider.LifeTime TimeProviderSim.LifeTime)

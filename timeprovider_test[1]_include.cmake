@@ -1,5 +1,0 @@
-if(EXISTS "E:/Users/Andreas/Andreas/PrivateElektronik/Cpp/HomeMaintenance/TimeProvider/build/test/timeprovider_test[1]_tests.cmake")
-  include("E:/Users/Andreas/Andreas/PrivateElektronik/Cpp/HomeMaintenance/TimeProvider/build/test/timeprovider_test[1]_tests.cmake")
-else()
-  add_test(timeprovider_test_NOT_BUILT timeprovider_test_NOT_BUILT)
-endif()
