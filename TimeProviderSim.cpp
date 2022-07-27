@@ -1,14 +1,21 @@
 #include "TimeProviderSim.h"
 
 
-TimeProviderSim& TimeProviderSim::getInstance(){
-    static TimeProviderSim instance;
-    return instance;
+TimeProviderSim* TimeProviderSim::_timeprovider = nullptr;
+
+TimeProviderSim* TimeProviderSim::getInstance(){
+    if(_timeprovider==nullptr){
+        _timeprovider = new TimeProviderSim();
+    }
+    return _timeprovider;
 }
 
 TimeProviderSim::TimeProviderSim():TimeProvider(){}
 
-TimeProviderSim::~TimeProviderSim(){}
+TimeProviderSim::~TimeProviderSim(){
+    delete _timeprovider;
+    _timeprovider = nullptr;
+}
 
 milliseconds TimeProviderSim::time_now() const{
     return time;

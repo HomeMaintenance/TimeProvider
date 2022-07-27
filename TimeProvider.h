@@ -6,13 +6,15 @@ using steady_clock = std::chrono::steady_clock;
 
 class TimeProvider{
 public:
-    static TimeProvider& getInstance();
+    static TimeProvider* getInstance();
 
     virtual milliseconds time_now() const;
 
 protected:
     TimeProvider();
-    ~TimeProvider();
+    virtual ~TimeProvider();
+
+    static TimeProvider* _timeprovider;
 
 private:
     TimeProvider(TimeProvider const&) = delete;

@@ -4,7 +4,7 @@
 #include <TimeProviderSim.h>
 
 TEST(TimeProvider, LifeTime){
-    TimeProvider& test = TimeProvider::getInstance();
+    TimeProvider& test = *TimeProvider::getInstance();
     auto time_now_1 = test.time_now();
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
     auto time_now_2 = test.time_now();
@@ -13,7 +13,7 @@ TEST(TimeProvider, LifeTime){
 }
 
 TEST(TimeProviderSim, LifeTime){
-    TimeProviderSim& test = TimeProviderSim::getInstance();
+    TimeProviderSim& test = *TimeProviderSim::getInstance();
     auto time_now_1 = test.time_now();
     test.advance_time(milliseconds(1000));
     auto time_now_2 = test.time_now();
