@@ -8,7 +8,7 @@ class TimeProvider{
 public:
     static TimeProvider* getInstance();
 
-    virtual milliseconds time_now() const;
+    virtual milliseconds get_time() const;
 
 protected:
     TimeProvider();

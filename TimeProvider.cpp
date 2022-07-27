@@ -20,6 +20,6 @@ TimeProvider::~TimeProvider(){
     std::cout << "TimeProvider::~TimeProvider()" << std::endl;
 }
 
-milliseconds TimeProvider::time_now() const{
+milliseconds TimeProvider::get_time() const{
     return steady_clock::now().time_since_epoch();
 }

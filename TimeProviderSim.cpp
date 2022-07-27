@@ -17,7 +17,7 @@ TimeProviderSim::~TimeProviderSim(){
     _timeprovider = nullptr;
 }
 
-milliseconds TimeProviderSim::time_now() const{
+milliseconds TimeProviderSim::get_time() const{
     return time;
 }
 

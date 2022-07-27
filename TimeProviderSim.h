@@ -8,7 +8,7 @@ class TimeProviderSim: public TimeProvider{
 public:
     static TimeProviderSim* getInstance();
 
-    virtual milliseconds time_now() const override;
+    virtual milliseconds get_time() const override;
 
     virtual void advance_time(const milliseconds& time);
 
