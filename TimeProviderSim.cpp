@@ -6,7 +6,7 @@ TimeProviderSim& TimeProviderSim::getInstance(){
     return instance;
 }
 
-TimeProviderSim::TimeProviderSim(){}
+TimeProviderSim::TimeProviderSim():TimeProvider(){}
 
 TimeProviderSim::~TimeProviderSim(){}
 

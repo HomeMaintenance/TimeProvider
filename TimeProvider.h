@@ -10,9 +10,11 @@ public:
 
     virtual milliseconds time_now() const;
 
+protected:
+    TimeProvider();
+    ~TimeProvider();
+
 private:
     TimeProvider(TimeProvider const&) = delete;
     void operator=(TimeProvider const&)  = delete;
-    TimeProvider();
-    ~TimeProvider();
 };

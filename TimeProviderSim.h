@@ -1,13 +1,14 @@
 #pragma once
 #include <chrono>
+#include "TimeProvider.h"
 
 using milliseconds = std::chrono::duration<double, std::milli>;
 
-class TimeProviderSim{
+class TimeProviderSim: public TimeProvider{
 public:
     static TimeProviderSim& getInstance();
 
-    virtual milliseconds time_now() const;
+    virtual milliseconds time_now() const override;
 
     virtual void advance_time(const milliseconds& time);
 
