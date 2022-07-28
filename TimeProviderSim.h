@@ -12,6 +12,8 @@ public:
 
     virtual void advance_time(const milliseconds& time);
 
+    virtual void sleep_for(const milliseconds& duration) override;
+
 protected:
     static TimeProviderSim* _timeprovider;
 

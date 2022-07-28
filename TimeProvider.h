@@ -10,6 +10,8 @@ public:
 
     virtual milliseconds get_time() const;
 
+    virtual void sleep_for(const milliseconds& duration);
+
 protected:
     TimeProvider();
     virtual ~TimeProvider();

@@ -1,5 +1,6 @@
 #include "TimeProvider.h"
 #include <iostream>
+#include <thread>
 
 TimeProvider* TimeProvider::_timeprovider = nullptr;
 
@@ -18,6 +19,10 @@ TimeProvider::~TimeProvider(){
     delete _timeprovider;
     _timeprovider = nullptr;
     std::cout << "TimeProvider::~TimeProvider()" << std::endl;
+}
+
+void TimeProvider::sleep_for(const milliseconds& duration){
+    std::this_thread::sleep_for(duration);
 }
 
 milliseconds TimeProvider::get_time() const{

@@ -24,3 +24,7 @@ milliseconds TimeProviderSim::get_time() const{
 void TimeProviderSim::advance_time(const milliseconds& _time){
     time += _time;
 }
+
+void TimeProviderSim::sleep_for(const milliseconds& duration){
+    advance_time(duration);
+}
