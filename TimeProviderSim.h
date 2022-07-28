@@ -23,5 +23,5 @@ private:
     TimeProviderSim();
     virtual ~TimeProviderSim();
 
-    milliseconds time;
+    milliseconds time{milliseconds(0)};
 };
